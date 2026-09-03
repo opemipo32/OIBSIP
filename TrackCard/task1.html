@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Title Card — Task 1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700&family=Inter:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy-dark: #1D2438;
+    --terracotta: #C1502E;
+    --cream: #F1E9DC;
+    --gray: #9AA0B4;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    height: 100%;
+    background: var(--navy-dark);
+    font-family: "Inter", sans-serif;
+    overflow: hidden;
+  }
+  .card {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+    position: relative;
+  }
+  .eyebrow {
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 28px;
+  }
+  .name {
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+    font-size: clamp(2.4rem, 6vw, 4.2rem);
+    color: var(--cream);
+    margin-bottom: 22px;
+    line-height: 1.1;
+  }
+  .meta {
+    font-size: clamp(1.1rem, 2.4vw, 1.4rem);
+    color: var(--gray);
+    font-weight: 500;
+    margin-bottom: 34px;
+  }
+  .task-badge {
+    display: inline-block;
+    font-family: "Fraunces", serif;
+    font-weight: 600;
+    font-size: clamp(1.3rem, 3vw, 1.9rem);
+    color: var(--navy-dark);
+    background: var(--terracotta);
+    padding: 16px 40px;
+    border-radius: 999px;
+    letter-spacing: 0.02em;
+  }
+  .frame {
+    position: absolute;
+    inset: 28px;
+    border: 1px solid rgba(241, 233, 220, 0.18);
+    pointer-events: none;
+  }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="frame"></div>
+  <p class="eyebrow">Project Demo</p>
+  <h1 class="name">Ajayi Andrew Opemipo</h1>
+  <p class="meta">Track: Web Development</p>
+  <div class="task-badge">TASK 1 · Landing Page</div>
+</div>
+</body>
+</html>
