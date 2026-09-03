@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Temperature Converter</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="page">
+  <div class="card">
+    <p class="eyebrow">Quick Tool</p>
+    <h1>Temperature Converter</h1>
+    <p class="subtitle">Enter a value, pick its unit, and convert to Celsius, Fahrenheit and Kelvin at once.</p>
+
+    <form id="converter-form" novalidate>
+      <div class="field">
+        <label for="temp-input">Temperature value</label>
+        <input
+          type="text"
+          inputmode="decimal"
+          id="temp-input"
+          name="temperature"
+          placeholder="e.g. 100"
+          autocomplete="off">
+      </div>
+
+      <fieldset class="field unit-field">
+        <legend>Input unit</legend>
+        <div class="unit-toggle">
+          <input type="radio" id="unit-c" name="unit" value="C" checked>
+          <label for="unit-c">°C</label>
+
+          <input type="radio" id="unit-f" name="unit" value="F">
+          <label for="unit-f">°F</label>
+
+          <input type="radio" id="unit-k" name="unit" value="K">
+          <label for="unit-k">K</label>
+        </div>
+      </fieldset>
+
+      <button type="submit" class="btn btn-primary">Convert</button>
+    </form>
+
+    <p id="error-message" class="error-message" role="alert" hidden></p>
+
+    <div id="results" class="results">
+      <div class="result-row">
+        <span class="result-label">Celsius</span>
+        <span class="result-value" id="result-c">—</span>
+      </div>
+      <div class="result-row">
+        <span class="result-label">Fahrenheit</span>
+        <span class="result-value" id="result-f">—</span>
+      </div>
+      <div class="result-row">
+        <span class="result-label">Kelvin</span>
+        <span class="result-value" id="result-k">—</span>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
